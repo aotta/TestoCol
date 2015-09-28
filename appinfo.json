@@ -1,0 +1,44 @@
+{
+    "appKeys": {
+        "KEY_COLOR_B": 1,
+        "KEY_COLOR_F": 0
+    },
+    "capabilities": [
+        "configurable"
+    ],
+    "companyName": "Andrea Ottaviani",
+    "longName": "TestoCol",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "characterRegex": "[A-z]",
+                "file": "fonts/helv_bold.ttf",
+                "name": "FONT_HELV_BOLD_38",
+                "type": "font"
+            },
+            {
+                "characterRegex": "[A-z]",
+                "file": "fonts/helv_l.ttf",
+                "name": "FONT_HELV_L_34",
+                "type": "font"
+            },
+            {
+                "file": "images/menu_icon_fuzzyita.png",
+                "menuIcon": true,
+                "name": "MENU_ICON_FUZZY_WATCH",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "TestoCol",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "221cb576-0986-475a-bd4d-7339860acec9",
+    "versionLabel": "1.1",
+    "watchapp": {
+        "watchface": true
+    }
+}
