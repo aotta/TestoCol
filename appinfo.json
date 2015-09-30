@@ -1,7 +1,8 @@
 {
     "appKeys": {
-        "KEY_COLOR_B": 1,
-        "KEY_COLOR_F": 0
+        "action": 0,
+        "ledcolorB": 2,
+        "ledcolorF": 1
     },
     "capabilities": [
         "configurable"
@@ -13,14 +14,20 @@
         "media": [
             {
                 "characterRegex": "[A-z]",
+                "file": "fonts/JLSSpaceGothicC_NC.otf",
+                "name": "FONT_SPACE_BOLD_28",
+                "type": "font"
+            },
+            {
+                "characterRegex": "[A-z]",
                 "file": "fonts/helv_bold.ttf",
-                "name": "FONT_HELV_BOLD_38",
+                "name": "FONT_HELV_BOLD_20",
                 "type": "font"
             },
             {
                 "characterRegex": "[A-z]",
                 "file": "fonts/helv_l.ttf",
-                "name": "FONT_HELV_L_34",
+                "name": "FONT_HELV_L_28",
                 "type": "font"
             },
             {
