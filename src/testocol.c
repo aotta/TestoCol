@@ -44,11 +44,15 @@ static void setdefcolor() {
 static void update_time(struct tm* t) {
   time_to_words(t->tm_hour, t->tm_min, s_data.buffer, BUFFER_SIZE);
   
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "Ora: %s", s_data.buffer);
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "Ora: %s", s_data.buffer);
 	
 	window_set_background_color(s_data.window, bkColore);
 	text_layer_set_background_color(s_data.label, bkColore);
   text_layer_set_text_color(s_data.label, Colore);
+	text_layer_set_overflow_mode(s_data.label,GTextOverflowModeTrailingEllipsis);
+	// try also:GTextOverflowModeWordWrap 
+	// try also: GTextOverflowModeTrailingEllipsis  
+	// try also: GTextOverflowModeFill
 	text_layer_set_text(s_data.label, s_data.buffer);
 	//text_layer_set_text(s_data.label2, s_data.buffer2);
 }
@@ -109,13 +113,12 @@ static void do_init(void) {
   window_stack_push(s_data.window, animated);
 
   window_set_background_color(s_data.window, bkColore);
-  fontbold = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SPACE_BOLD_28));
-  fontnormal = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELV_L_28));
-	
+  //fontbold = fonts_get_system_font(FONT_KEY_BITHAM_30_BLACK);
+  fontnormal = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_DIGITAL_42));
   root_layer = window_get_root_layer(s_data.window);
   GRect frame = layer_get_frame(root_layer);
 
-  s_data.label = text_layer_create(GRect(2, 20, frame.size.w, frame.size.h-20));
+  s_data.label = text_layer_create(GRect(8, 5, frame.size.w-8, frame.size.h-5));
   text_layer_set_background_color(s_data.label, bkColore);
   text_layer_set_text_color(s_data.label, Colore);
   text_layer_set_font(s_data.label, fontnormal);

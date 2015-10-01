@@ -13,28 +13,16 @@
     "resources": {
         "media": [
             {
-                "characterRegex": "[A-z]",
-                "file": "fonts/JLSSpaceGothicC_NC.otf",
-                "name": "FONT_SPACE_BOLD_28",
-                "type": "font"
-            },
-            {
-                "characterRegex": "[A-z]",
-                "file": "fonts/helv_bold.ttf",
-                "name": "FONT_HELV_BOLD_20",
-                "type": "font"
-            },
-            {
-                "characterRegex": "[A-z]",
-                "file": "fonts/helv_l.ttf",
-                "name": "FONT_HELV_L_28",
-                "type": "font"
-            },
-            {
-                "file": "images/menu_icon_fuzzyita.png",
+                "file": "images/TestoCol28.png",
                 "menuIcon": true,
-                "name": "MENU_ICON_FUZZY_WATCH",
+                "name": "MENU_ICON_TESTOCOL",
                 "type": "png"
+            },
+            {
+                "characterRegex": "[A-Z -]",
+                "file": "fonts/digital display tfb.ttf",
+                "name": "FONT_DIGITAL_42",
+                "type": "font"
             }
         ]
     },

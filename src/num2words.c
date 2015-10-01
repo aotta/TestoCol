@@ -41,6 +41,19 @@ static const char* const DECINE[] = {
   "NOVANTA"
 };
 
+static const char* const DECIN[] = {
+  "",
+  "DIECI",
+  "VENT",
+  "TRENT",
+  "QUARANT",
+  "CINQUANT",
+  "SESSANT",
+  "SETTANT",
+  "OTTANT",
+  "NOVANT"
+};
+
 static const char* STR_PAST = " E ";
 static const char* STR_UNA = "UNA";
 static const char* STR_MIDNIGHT="MEZZANOTTE";
@@ -58,12 +71,14 @@ static size_t append_number(char* words, int num) {
       strcat(words, TEENS[unita_val]);
       return strlen(TEENS[unita_val]);
     }
-    strcat(words, DECINE[decine_val]);
-    len += strlen(DECINE[decine_val]);
-    //if (unita_val > 0) {
-    //  strcat(words, " ");
-    //  len += 1;
-    //}
+    if (unita_val !=1 && unita_val !=8) {
+			strcat(words, DECINE[decine_val]);
+    	len += strlen(DECINE[decine_val]);    	
+		} else {
+			APP_LOG(APP_LOG_LEVEL_INFO, "minuti= %i",unita_val);
+			strcat(words, DECIN[decine_val]);
+    	len += strlen(DECIN[decine_val]);    	
+		}
   }
 
   if (unita_val > 0 || num == 0) {
